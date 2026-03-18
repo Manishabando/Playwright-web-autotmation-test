@@ -1,10 +1,13 @@
-  const {test,expect} =require('@playwright/test');
-
-   test("Valid test", async function({page})
- {
-    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+   const {test,expect} =require('@playwright/test');
+ 
+test("Valid test", async ({ page }) => {
+  
+  await page.goto( "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
     
-    await page.locator("//input[@name='Username']").fill("Admin")  
+    { waitUntil: 'domcontentloaded' }
+                  
+  );    
+    await page.getByPlaceholder("Username").fill("Admin")
     
     await page.getByPlaceholder("Password").fill("admin123")
 
@@ -12,11 +15,11 @@
 
     await expect(page.getByRole("heading", { name: "Dashboard" })).toBeVisible()
 
-    await page.getByAltText("profile picture").first().click()
+    await page.getByAltText("profile picture").click()
 
     await page.getByText("Logout").click()
 
     await expect(page).toHaveURL(/login/) 
-         
-}) ;
 
+ 
+}) ;
