@@ -1,1 +1,1 @@
-This is my first web-based automation testing project using playwright in java script.
+This is my web-based automation testing project using playwright in java script. For reference.
