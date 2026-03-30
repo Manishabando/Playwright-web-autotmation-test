@@ -1,5 +1,8 @@
-This is my web-based automation testing project using playwright in java script. For reference.
-This has basic features implimented in dummy websites for learning.
+This is my web-based automation testing project using playwright in java script. 
+
+**For reference.
+**This has basic features implimented in dummy websites for learning.
+
 This covers these features:
 Example spec- Verify expect .tobe,.toBeFalsy,.toBeTruly
 Google spec test- Navigate to google page, check for gmail, image, google searchbox to be visible.
